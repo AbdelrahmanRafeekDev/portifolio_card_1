@@ -1,74 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Abdelrahman Rafeek | portfolio</title>
+        <title>portfolio_card</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0 "> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
+            @font-face{
+                font-family: 'p';
+                src: url('p_font.ttf') format('truetype');
+            }
             body{
-                background-color: #101827;
-                color: white;
-                font-family:  Arial, sans-serif;
+                background-color:rgb(40 40 40);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin:0;
+            }
+            .card{
+                /* border: 5px solid black; */
+                border-radius: 10px;
+                background-color:rgb(80 76 76) ;
+                color:white;
+                width: 350px;
+                height: auto;
+                padding: 10px;
+                box-shadow: 0 0 10px white;
                 text-align: center;
-                padding: 100px 20px;
-                
-            }
-            h1{
-                color: #38bdf8;
-                font-size: 40px;
-                text-shadow: 0 0 10px #38bdf8;
-            }
-            p{
-                color: #cbd5e1;
-                font-size: 20px;
-            }
-            a{
-                display: inline-block;
-                background-color: #38bdf8;
-                color: #101827;
-                padding: 12px 25px;
-                text-decoration: none;
-                border-radius: 8px;
-                margin-top:20px;
-                transition: 0.3s ease;
-                cursor: pointer;
-                
+                transition: all 0.3s ease;  
 
             }
-            a:hover{
-                transform: translateY(-5px);
+            .button{
                 
+                background-color:white;
+                color:black;
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 5px;
+                transition: all 0.3s ease;
+                margin: 5px;
             }
-            img{
-                /* display: inline-block; */
-                width:150px ;
-                height:auto ;
-                border: 5px solid gold;
-                border-radius:50%;
-                transition: 0.3s ease;
-                box-shadow: 0 0 15px gold;
+            .button:hover{
+                background-color: blue;
+                color: white;
+                transform: scale(1.1);
+            }
+           
+            .card:hover{
+                transform: scale(1.05);
+            }
+            #main_head{
+                color:goldenrod;
+                text-shadow: 0 0 2px white;
+                transition: all 0.3s ease;
+            }
+            #main_head:hover{
+                transform: scale(1.02);
+            }
 
-            }
-            img:hover{
-                /* width: 200px; */
-                /* height: auto; */
-                transform: scale(1.1) translatey(-5px) rotate(10deg);
+            .personalphoto{
+                width: 75px;
+                border-radius: 50%;
+                box-shadow: 0 0 15px white;
+                transition: all 0.3s ease;
             
-               
             }
+            .personalphoto:hover{
+                transform: scale(1.05) rotate(15deg);
 
-
+            }
+            .font{
+                font-family: 'p',Arail,sans-serif;
+            }
 
 
         </style>
     </head>
     <body>
-        <h1>Hello,I'm Abdelrahman Rafeek</h1>
-        <p>AI Engineer & Full Stack Developer</p>
-        <p>Welcome to my first website</p>
-        <img src="main_portfolio_photo.jpg" alt="Abdelrahman Rafeek's personal photo"><br> 
-        <a href="https://github.com/AbdelrahmanRafeekDev">Visit My GitHub</a>
-
+        <div class="card">
+            <img src="me.jpg" alt="AbdelrahmanRafeek personal photo" class="personalphoto">
+            <h1 id="main_head">Hello, I'm Abdelrahman Rafeek</h1>
+            <p class="font">AI engineer & Full Stack Developer</p>
+            <a href="https://www.linkedin.com/in/abdelrahman-rafeek-915774307" class="button" target="_blank">LinkedIn</a>
+            <a href="https://github.com/AbdelrahmanRafeekDev" class="button" target="_blank">Visit My GitHub</a>
+        </div>
     </body>
 
 
